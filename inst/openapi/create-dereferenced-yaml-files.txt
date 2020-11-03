@@ -1,0 +1,19 @@
+git clone git@github.com:plantbreeding/API.git
+
+copy derefAll2Filev2.0.py to the Scripts/ folder!
+
+To create a full dereferenced version 2.0 yaml file:
+1. git checkout brapi-v2-dev -> after v2.0 release: git checkout master
+2. Make sure you are at the top level
+3. Run in terminal: python3 ./Scripts/buildOpenAPI.py ./Specification/BrAPI-Core/ ./Specification/BrAPI-Germplasm/ ./Specification/BrAPI-Genotyping/ ./Specification/BrAPI-Phenotyping/ ./Specification/Components/
+4. cd Specification/BrAPI-Core/
+5. Next run: python3 ../../Scripts/derefAll2Filev2.0.py ./brapi_openapi.yaml ./brapi_2.0.yaml
+
+To create modular dereferenced version 2.0 yaml files:
+1. git checkout brapi-v2-dev -> after v2.0 release: git checkout master
+2. Make sure you are at the top level
+3. Run in terminal: python3 ./Scripts/buildOpenAPI.py ./Specification/BrAPI-*/ ./Specification/Components/
+4. cd Specification/BrAPI-*/
+5. Next run: python3 ../../Scripts/derefAll2Filev2.0.py ./brapi_openapi.yaml ./brapi-*_2.0.yaml
+Replace * with Core / Genotyping / Germplasm / Phenotyping where the first character is upper case in step 3. and 4. and lower case in step 5.
+
