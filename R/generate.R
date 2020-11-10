@@ -361,7 +361,7 @@ aCallReqArgs <- function(aCall) {
   required <- character(0)
   for (i in 1:n) {
     p <- aCall$parameters[[i]]
-    if (p[["required"]] == TRUE) {
+    if (p[["required"]] == TRUE && !is.null(p[["required"]])) {
       required <- paste(required,
                         aCall[["parameters"]][[i]][["name"]],
                         sep = ", ")
@@ -386,15 +386,20 @@ aCallReqArgs <- function(aCall) {
 ### Create a GET function
 
 ### brapigen package needs to be build!
-### Changed to version 1.3
-brapiSpecs <- yaml::read_yaml(system.file("openapi/brapi_1.3.yaml",
+### Changed to version 2.0
+### brapi_2.0.yaml # Full Specs
+### brapi-core_2.0.yaml # Core Specs
+### brapi-genotyping_2.0.yaml # Genotyping Specs
+### brapi-germplasm_2.0.yaml # Germplasm Specs
+### brapi-phenotyping_2.0.yaml # Phenotyping Specs
+brapiSpecs <- yaml::read_yaml(system.file("openapi/brapi-core_2.0.yaml",
                                           package = "brapigen"))
 
 ### Packages to be added to DESCRIPTION of Brapir
 ### usethis::use_package(package = "curl")
 
 ### Create directory infrastructure
-dir_b <- "../brapir"
+dir_b <- "../brapir-v2"
 
 base::unlink(x = dir_b, recursive = TRUE, force = TRUE)
 base::list.files(path = dir_b, recursive = TRUE)
@@ -413,13 +418,14 @@ invisible(base::file.copy(from = paste0("inst/templates/", fileNames),
 
 ### Retrieve call names in a readable format
 ###
-### 105 Total calls
-### --- +
+### brapi-core       brapi-genotyping
+###  44 Total calls
+### --- +            --- +
 ###   0 DELETE calls
-###  72 GET calls
+###  23 GET calls
 ###   0 PATCH calls
-###  22 POST calls
-###  11 PUT calls
+###  14 POST calls
+###   7 PUT calls
 allCallNames <- fetchCallNames(brapiSpecs = brapiSpecs)
 for (verb in c("DELETE", "GET", "PATCH", "POST", "PUT")) {
   assign(paste(verb, "calls", sep = ""), fetchCallNames(brapiSpecs, verb))
@@ -461,9 +467,11 @@ for (callName in GETcalls) {
   aCall <- aCallReqArgs(aCall = aCall)
   ## Store call family information for documentation in @family
   aCallFamily <- c(
+    ## brapi_2.0
     paste0(tolower(strsplit(x = brapiSpecs[["info"]][["title"]], split = "-")[[1]][1]),
            "_",
            brapiSpecs[["info"]][["version"]]),
+    tolower(brapiSpecs[["info"]][["title"]]),
     aCall[["tags"]]
   )
   aCallFamily <- whisker::iteratelist(aCallFamily, value = "fname")
