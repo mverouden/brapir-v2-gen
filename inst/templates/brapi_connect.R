@@ -24,7 +24,7 @@
 #' @details
 #' If the brapiDb argument is used to specify a connection object as created by the `as.brapi_db()` function or from the white list in the `brapi_db()` function, it will override the other parameters; except for user, password and token.
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @return An BrAPI compliant database connection object of class brapi_db.
 #'
@@ -55,19 +55,19 @@ brapi_connect <- function(brapiDb = NULL,
   } else {
     # check for net connectivity
     brapi_canInternet()
-    brapi_checkConArgs(secure = secure,
-                       protocol = protocol,
-                       db = db,
-                       port = port,
-                       apipath = apipath,
-                       multicrop = multicrop,
-                       commoncropname = commoncropname,
-                       user = user,
-                       password = password,
-                       token = token,
-                       granttype = granttype,
-                       clientid = clientid,
-                       bms = bms)
+    brapir:::brapi_checkConArgs(secure = secure,
+                                protocol = protocol,
+                                db = db,
+                                port = port,
+                                apipath = apipath,
+                                multicrop = multicrop,
+                                commoncropname = commoncropname,
+                                user = user,
+                                password = password,
+                                token = token,
+                                granttype = granttype,
+                                clientid = clientid,
+                                bms = bms)
     # bms == TRUE, then always multicrop == TRUE
     if (bms == TRUE) {
       multicrop <- TRUE

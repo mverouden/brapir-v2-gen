@@ -21,7 +21,7 @@
 #'
 #' @return An BrAPI compliant database connection object of class brapi_db.
 #'
-#' @author brapir generator package
+#' @author Maikel Verouden
 #'
 #' @family brapiutils
 #'
@@ -39,19 +39,19 @@ as.brapi_db <- function(secure = FALSE,
                         granttype = "password",
                         clientid = "brapir",
                         bms = FALSE) {
-  brapi_checkConArgs(secure = secure,
-                     protocol = protocol,
-                     db = db,
-                     port = port,
-                     apipath = apipath,
-                     multicrop = multicrop,
-                     commoncropname = commoncropname,
-                     user = user,
-                     password = password,
-                     token = token,
-                     granttype = granttype,
-                     clientid = clientid,
-                     bms = bms)
+  brapir:::brapi_checkConArgs(secure = secure,
+                              protocol = protocol,
+                              db = db,
+                              port = port,
+                              apipath = apipath,
+                              multicrop = multicrop,
+                              commoncropname = commoncropname,
+                              user = user,
+                              password = password,
+                              token = token,
+                              granttype = granttype,
+                              clientid = clientid,
+                              bms = bms)
   out <- list(secure = secure,
               protocol = protocol,
               db = db,

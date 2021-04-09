@@ -1,4 +1,9 @@
-### Internal function to create a call body for a POST call
+#' Helper function to create a call body for a POST call
+#'
+#' @author Maikel Verouden
+#'
+#' @noRd
+#' @keywords internal
 brapi_POST_callBody <- function(usedArgs, reqArgs) {
   if (is.null(usedArgs[["con"]])) {return(NULL)}
   ## Preprocess required arguments
