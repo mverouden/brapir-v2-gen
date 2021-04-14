@@ -542,10 +542,13 @@ for (callName in POSTcalls) {
   aCall <- aCallReqArgs(aCall = aCall)
   ## Store call family information for documentation in @family
   aCallFamily <- c(
+    ## brapi_2.0
     paste0(tolower(strsplit(x = brapiSpecs[["info"]][["title"]], split = "-")[[1]][1]),
            "_",
            brapiSpecs[["info"]][["version"]]),
-    aCall[["tags"]])
+    tolower(brapiSpecs[["info"]][["title"]]),
+    aCall[["tags"]]
+  )
   aCallFamily <- whisker::iteratelist(aCallFamily, value = "fname")
   ## Create call data list object for the selected call to be used by the
   ## whisker package.

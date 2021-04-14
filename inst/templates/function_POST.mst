@@ -15,8 +15,9 @@
 #'
 #' @author Maikel Verouden
 #'
-#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI/{{version}}#/{{tag}}/{{verb}}_{{callRefURL}} }{BrAPI SwaggerHub}
+#' @references \href{https://app.swaggerhub.com/apis/PlantBreedingAPI/{{package}}/{{version}}#/{{tag}}/{{verb}}_{{callRefURL}} }{BrAPI SwaggerHub}
 #'
+#' @family {{package}}
 {{#family}}
 #' @family {{fname}}
 {{/family}}
