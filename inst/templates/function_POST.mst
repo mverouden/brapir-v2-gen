@@ -40,6 +40,9 @@ brapi_{{verb}}_{{name}} <- function(con = NULL, {{arguments}}) {
   ## Build the Body
   callbody <- brapir:::brapi_POST_callBody(usedArgs = usedArgs,
                                            reqArgs = "{{required}}")
+  ## Adaptation for v2.0 where json body is wrapped in []
+  callbody <- list(callbody)
+
   try({
     ## Make the call and receive the response
     resp <- brapir:::brapi_POST(url = callurl, body = callbody, usedArgs = usedArgs)
