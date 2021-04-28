@@ -3,7 +3,7 @@
 ## class(con) <- c("list", "brapi", "brapi_con")
 ## con[["token"]] <- "YYYY"
 ##
-## tested calls BrAPI-Core: GET 17/23, POST 2/14, PUT 0/7
+## tested calls BrAPI-Core: GET 17/23, POST 7/14, PUT 0/7
 ##
 ## GET (D = Detail, M = Master, M/D = Master/Detail)
 brapi_get_commoncropnames(con = con)#, pageSize = 1, page = 1) # 1 (D)
@@ -32,5 +32,17 @@ brapi_get_studytypes(con = con)#, page = 0, pageSize = 1000) # 21 (D)
 brapi_get_trials(con = con)#, active = NA, commonCropName = "", contactDbId = "", programDbId = "", locationDbId = "", searchDateRangeStart = "", searchDateRangeEnd = "", studyDbId = "", trialDbId = "", trialName = "", trialPUI = "", sortBy = "", sortOrder = "", externalReferenceID = "", externalReferenceSource = "", page = 0, pageSize = 1000) # 22 (D)
 brapi_get_trials_trialDbId(con = con, trialDbId = "trial3") # 23 (M)
 ## POST
-brapi_post_lists(con = con, data = data, additionalInfo = additionalInfo, dateCreated = dateCreated, dateModified = dateModified, externalReferences = externalReferences, listDescription = listDescription, listName = listName, listOwnerName = listOwnerName, listOwnerPersonDbId = listOwnerPersonDbId, listSize = listSize, listSource = listSource, listType = listType) # 1 see Examples section for specification
-brapi_post_lists_listDbId_items(con = con, listDbId = unique(out$listDbId), items = c("germ1", "germ2", "germ3")) # 2 see Examples section for specification
+brapi_post_lists(con = con, data = data, additionalInfo = additionalInfo, dateCreated = dateCreated, dateModified = dateModified, externalReferences = externalReferences, listDescription = listDescription, listName = listName, listOwnerName = listOwnerName, listOwnerPersonDbId = listOwnerPersonDbId, listSize = listSize, listSource = listSource, listType = listType) # 1 (D) see Examples section for specification
+brapi_post_lists_listDbId_items(con = con, listDbId = unique(out$listDbId), items = c("germ1", "germ2", "germ3")) # 2 (M/D) see Examples section for specification
+brapi_post_location(con = con, abbreviation = abbreviation, additionalInfo = additionalInfo, coordinateDescription = coordinateDescription, coordinateUncertainty = coordinateUncertainty, coordinates = pointGeometry, countryCode = countryCode, countryName = countryName, documentationURL = documentationURL, environmentType = environmentType, exposure = exposure, externalReferences = externalReferences, instituteAddress = instituteAddress, instituteName = instituteName, locationName = locationName, locationType = locationType, siteStatus = siteStatus, slope = slope, topography = topography) # 3 (D) see Examples section for specification
+brapi_post_people(con = con, additionalInfo = additionalInfo, description = description, emailAddress = emailAddress, externalReferences = externalReferences, firstName = firstName, middleName = middleName, lastName = lastName, mailingAddress = mailingAddress, phoneNumber = phoneNumber, userID = usedID) # 4 (D) see Examples section for specification
+brapi_post_programs(con = con, abbreviation = abbreviation, additionalInfo = additionalInfo, commonCropName = commonCropName, documentationURL = documentationURL, externalReferences = externalReferences, leadPersonDbId = leadPersonDbId, leadPersonName = leadPersonName, objective = objective, programName = programName) # 5 (D) see Examples section for specification
+# 6 (D) see Examples section for specification
+# 7 (D) see Examples section for specification
+# 8 (D) see Examples section for specification
+# 9 (D) see Examples section for specification
+# 10 (D) see Examples section for specification
+# 11 (D) see Examples section for specification
+brapi_post_seasons(con = con, seasonDbId = seasonDbId, seasonName = seasonName, year = year) # 12 (D)  see Examples section for specification
+brapi_post_studies(con = con, active = active, additionalInfo = additionalInfo, commonCropName = commonCropName, contacts = contacts, culturalPractices = culturalPractices, dataLinks = dataLinks, documentationURL = documentationURL, endDate = endDate, environmentParameters = environmentParameters, experimentalDesign = experimentalDesign, externalReferences = externalReferences, growthFacility = growthFacility, lastUpdate = lastUpdate, license = license, locationDbId = locationDbId, locationName = locationName, observationLevels = observationLevels, observationUnitsDescription = observationUnitsDescription, seasons = seasons, startDate = startDate, studyCode = studyCode, studyDescription = studyDescription, studyName = studyName, studyPUI = studyPUI, studyType = studyType, trialDbId = trialDbId, trialName = trialName) # 13 (D) see Examples section for specification
+brapi_post_trials(con = con, active = active, additionalInfo = additionalInfo, commonCropName = commonCropName, contacts = contacts, datasetAuthorships = datasetAuthorships, documentationURL = documentationURL, endDate = endDate, externalReferences = externalReferences, programDbId = programDbId, programName = programName, publications = publications, startDate = startDate, trialDescription = trialDescription, trialName = trialName, trialPUI = trialPUI) # 14 (D)  see Examples section for specification
