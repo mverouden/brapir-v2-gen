@@ -22,6 +22,9 @@
 {{/family}}
 #'
 #' @examples
+#' \dontrun{
+#'
+#' }
 #'
 #' @export
 brapi_{{verb}}_{{name}} <- function(con = NULL, {{arguments}}) {

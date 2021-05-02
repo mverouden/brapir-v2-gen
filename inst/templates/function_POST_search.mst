@@ -23,7 +23,10 @@
 #'
 #' @examples
 #' \dontrun{
+#' con <- brapi_db()$testserver
+#' con[["token"]] <- "YYYY"
 #'
+#' TO BE ADDED STILL
 #' }
 #'
 #' @export
@@ -35,15 +38,27 @@ brapi_{{verb}}_{{name}} <- function(con = NULL, {{arguments}}) {
   ## Check validity of used and required arguments
   brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "{{required}}")
   ## Obtain the call url
-  callurl <- brapirv2:::brapi_GET_callURL(usedArgs = usedArgs,
-                                          callPath = "{{call}}",
-                                          reqArgs = "{{required}}",
-                                          packageName = "{{package}}",
-                                          callVersion = {{version}})
+  callurl <- brapirv2:::brapi_POST_callURL(usedArgs = usedArgs,
+                                           callPath = "{{call}}",
+                                           reqArgs = "{{required}}",
+                                           packageName = "{{package}}",
+                                           callVersion = {{version}})
+  ## Build the Body
+  callbody <- brapirv2:::brapi_POST_callBody(usedArgs = usedArgs,
+                                             reqArgs = "{{required}}")
 
   try({
     ## Make the call and receive the response
-    resp <- brapirv2:::brapi_GET(url = callurl, usedArgs = usedArgs)
+    resp <- brapirv2:::brapi_POST(url = callurl, body = callbody, usedArgs = usedArgs)
+    ## Message about call status
+    if (httr::status_code(resp) == 200) {
+      message(paste0("Immediate Response.", "\n"))
+    } else if (httr::status_code(resp) == 202) {
+      message(paste0("Saved or Asynchronous Response has provided a searchResultsDbId.", "\n"))
+      message(paste0("Use the GET {{titleCall}}/{searchResultsDbId} call to retrieve the paginated output.", "\n"))
+    } else {
+      stop(paste0("The POST {{titleCall}} call resulted in Server status, ", httr::http_status(resp)[["message"]]))
+    }
     ## Extract the content from the response object in human readable form
     cont <- httr::content(x = resp, as = "text", encoding = "UTF-8")
     ## Convert the content object into a data.frame

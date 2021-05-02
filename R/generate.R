@@ -502,7 +502,11 @@ for (callName in GETcalls) {
   functionName <- whisker::whisker.render(template = template,
                                           data = aCallData)
   ## Load template to create the GET function
-  template <- readLines(con = "inst/templates/function_GET.mst")
+  if (!grepl(pattern = "(search)", callName)) {
+    template <- readLines(con = "inst/templates/function_GET.mst")
+  } else {
+    template <- readLines(con = "inst/templates/function_GET_search.mst")
+  }
   ## Write the created GET function
   writeLines(text = whisker::whisker.render(template = template,
                                             data = aCallData),
@@ -577,7 +581,11 @@ for (callName in POSTcalls) {
   functionName <- whisker::whisker.render(template = template,
                                           data = aCallData)
   ## Load template to create the GET function
-  template <- readLines(con = "inst/templates/function_POST.mst")
+  if (!grepl(pattern = "(search)", callName)) {
+    template <- readLines(con = "inst/templates/function_POST.mst")
+  } else {
+    template <- readLines(con = "inst/templates/function_POST_search.mst")
+  }
   ## Write the created GET function
   writeLines(text = whisker::whisker.render(template = template,
                                             data = aCallData),
