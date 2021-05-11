@@ -26,7 +26,12 @@
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
 #'
-#' TO BE ADDED STILL
+#'
+#' # Immediate Response Example
+#' brapi_{{verb}}_{{name}}(con = con, )
+#'
+#' # Saved or Asynchronous Search Response Example
+#' brapi_{{verb}}_{{name}}(con = con, )
 #' }
 #'
 #' @export
@@ -46,6 +51,8 @@ brapi_{{verb}}_{{name}} <- function(con = NULL, {{arguments}}) {
   ## Build the Body
   callbody <- brapirv2:::brapi_POST_callBody(usedArgs = usedArgs,
                                              reqArgs = "{{required}}")
+  ## Adaptation for v2.0 where json body is wrapped in []
+  callbody <- list(callbody)
 
   try({
     ## Make the call and receive the response
