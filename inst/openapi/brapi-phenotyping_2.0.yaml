@@ -8,13 +8,13 @@ paths:
     get:
       description: Get list of events
       parameters:
-      - description: Filter based on study unique identifier in which the events occured
+      - description: Filter based on study unique identifier in which the events occurred
         in: query
         name: studyDbId
         required: false
         schema:
           type: string
-      - description: Filter based on an ObservationUnit unique identifier in which the events occured
+      - description: Filter based on an ObservationUnit unique identifier in which the events occurred
         in: query
         name: observationUnitDbId
         required: false
@@ -178,7 +178,7 @@ paths:
                               description: Additional arbitrary info
                               type: object
                             date:
-                              description: 'A list of dates when the event occured
+                              description: 'A list of dates when the event occurred
 
 
                                 MIAPPE V1.1 (DM-68) Event date - Date and time of the event.'
@@ -12751,19 +12751,7 @@ paths:
       - Scales
   /search/images:
     post:
-      description: 'Get filtered set of image meta data
-
-
-        Implementation Notes
-
-
-        - ''''imageURL'''' should be a complete URL describing the location of the image. There is no BrAPI call for retrieving the image content, so it could be on a different path, or a different host.
-
-
-        - ''descriptiveOntologyTerm'' can be thought of as Tags for the image. These could be simple descriptive words, or ontology references, or full ontology URI''s.
-
-
-        See Search Services for additional implementation details.'
+      description: "Submit a search request for `XXEntitiesXX`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/XXEntitiesXX/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details.\n<br/>\n<br/>\nImage Implementation Notes<br/>\n- `imageURL` should be a complete URL describing the location of the image. There is no BrAPI call for retrieving the image content, so it could be on a different path, or a different host.<br/>\n- `descriptiveOntologyTerm` can be thought of as Tags for the image. These could be simple descriptive words, or ontology references, or full ontology URI's.<br/>"
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -13456,21 +13444,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Images
+      summary: Submit a search request for `XXEntitiesXX`
       tags:
       - Images
   /search/images/{searchResultsDbId}:
     get:
-      description: 'Get filtered set of image meta data
-
-
-        Implementation Notes
-
-
-        - ''''imageURL'''' should be a complete URL describing the location of the image. There is no BrAPI call for retrieving the image content, so it could be on a different path, or a different host.
-
-
-        - ''''descriptiveOntologyTerm'''' can be thought of as Tags for the image. These could be simple descriptive words, or ontology references, or full ontology URI''''s.'
+      description: "Get the results of a `Images` search request <br/>\nClients should submit a search request using the corresponding `POST /search/images` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details.\n<br/>\n<br/>\nImage Implementation Notes<br/>\n- `imageURL` should be a complete URL describing the location of the image. There is no BrAPI call for retrieving the image content, so it could be on a different path, or a different host.<br/>\n- `descriptiveOntologyTerm` can be thought of as Tags for the image. These could be simple descriptive words, or ontology references, or full ontology URI's.<br/>"
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -13960,12 +13939,12 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Get the results of an Images search request
+      summary: Get the results of a `Images` search request
       tags:
       - Images
   /search/observations:
     post:
-      description: Submit a search request for a set of Observations. Returns an Id which reference the results of this search
+      description: "Submit a search request for `Observations`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/observations/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -14546,18 +14525,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for a set of Observations
+      summary: Submit a search request for `Observations`
       tags:
       - Observations
   /search/observations/{searchResultsDbId}:
     get:
-      description: 'Returns a list of Observations based on search criteria.
-
-
-        observationTimeStamp - Iso Standard 8601.
-
-
-        observationValue data type inferred from the ontology'
+      description: "Get the results of a `Observations` search request <br/>\nClients should submit a search request using the corresponding `POST /search/observations` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: The requested content type which should be returned by the server
         example: application/json
@@ -14941,12 +14914,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Returns a list of Observations based on search criteria.
+      summary: Get the results of a `Observations` search request
       tags:
       - Observations
   /search/observationunits:
     post:
-      description: "Returns a list of observationUnit with the observed Phenotypes.\n\nSee Search Services for additional implementation details.\n\nUse case - this section allows to get a dataset from multiple studies. It allows to integrate data from several databases.\n\nExample Use cases \n\n- Study a panel of germplasm across multiple studies\n\n- Get all data for a specific study \n\n- Get simple atomic phenotyping values \n\n- Study Locations for adaptation to climate change\n\n- Find phenotypes that are from after a certain timestamp\n\nobservationTimeStampRangeStart and observationTimeStampRangeEnd use Iso Standard 8601.\n\nobservationValue data type inferred from the ontology"
+      description: "Submit a search request for `ObservationUnits`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/observationunits/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -15851,15 +15824,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Observation Units
+      summary: Submit a search request for `ObservationUnits`
       tags:
       - Observation Units
   /search/observationunits/{searchResultsDbId}:
     get:
-      description: 'Returns a list of observationUnit with the observed Phenotypes.
-
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a `ObservationUnits` search request <br/>\nClients should submit a search request using the corresponding `POST /search/observationunits` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -16583,15 +16553,12 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Observation Unit Search
+      summary: Get the results of a `ObservationUnits` search request
       tags:
       - Observation Units
   /search/variables:
     post:
-      description: 'Search observation variables.
-
-
-        See Search Services for additional implementation details.'
+      description: "Submit a search request for Observation `Variables`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/variables/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -17506,15 +17473,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Observation Variables
+      summary: Submit a search request for Observation `Variables`
       tags:
       - Observation Variables
   /search/variables/{searchResultsDbId}:
     get:
-      description: 'Search observation variables.
-
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a Observation `variables` search request <br/>\nClients should submit a search request using the corresponding `POST /search/variables` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -18332,7 +18296,7 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Get the results of a Observation Variable search request
+      summary: Get the results of a Observation `variables` search request
       tags:
       - Observation Variables
   /traits:

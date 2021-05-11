@@ -5730,9 +5730,7 @@ paths:
       - Programs
   /search/lists:
     post:
-      description: 'Advanced searching for the list resource.
-
-        See Search Services for additional implementation details.'
+      description: "Submit a search request for Lists <br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/lists/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -6162,9 +6160,7 @@ paths:
       - Lists
   /search/lists/{searchResultsDbId}:
     get:
-      description: 'Advanced searching for the list resource.
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a `List` search request <br/>\nClients should submit a search request using the corresponding `POST /search/lists` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -6521,14 +6517,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Get the results of a List search request
+      summary: Get the results of a `List` search request
       tags:
       - Lists
   /search/locations:
     post:
-      description: 'Advanced searching for the locations resource.
-
-        See Search Services for additional implementation details.'
+      description: "Submit a search request for `Locations`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/locations/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -7215,14 +7209,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Locations
+      summary: Submit a search request for `Locations`
       tags:
       - Locations
   /search/locations/{searchResultsDbId}:
     get:
-      description: 'Advanced searching for the locations resource.
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a `Locations` search request <br/>\nClients should submit a search request using the corresponding `POST /search/location` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -7717,15 +7709,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Get the results of a Locations search request
+      summary: Get the results of a `Locations` search request
       tags:
       - Locations
   /search/people:
     post:
-      description: 'Advanced searching for the programs resource.
-
-
-        See Search Services for additional implementation details.'
+      description: "Submit a search request for `People`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/people/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -8140,15 +8129,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for People
+      summary: Submit a search request for `People`
       tags:
       - People
   /search/people/{searchResultsDbId}:
     get:
-      description: 'Advanced searching for the people resource.
-
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a `People` search request <br/>\nClients should submit a search request using the corresponding `POST /search/people` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -8492,14 +8478,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Get the results of a People search request
+      summary: Get the results of a `People` search request
       tags:
       - People
   /search/programs:
     post:
-      description: 'Advanced searching for the programs resource.
-
-        See Search Services for additional implementation details.'
+      description: "Submit a search request for `Programs`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/programs/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -8902,14 +8886,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Programs
+      summary: Submit a search request for `Programs`
       tags:
       - Programs
   /search/programs/{searchResultsDbId}:
     get:
-      description: 'Advanced searching for the programs resource.
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a `Programs` search request <br/>\nClients should submit a search request using the corresponding `POST /search/programs` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -9257,16 +9239,12 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Get the results of a Programs search request
+      summary: Get the results of a `Programs` search request
       tags:
       - Programs
   /search/studies:
     post:
-      description: 'Get list of studies
-
-        StartDate and endDate should be ISO-8601 format for dates
-
-        See Search Services for additional implementation details.'
+      description: "Submit a search request for `Studies`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/studies/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -10059,18 +10037,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Studies
+      summary: Submit a search request for `Studies`
       tags:
       - Studies
   /search/studies/{searchResultsDbId}:
     get:
-      description: 'Get list of studies
-
-
-        StartDate and endDate should be ISO-8601 format for dates
-
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a `Studies` search request <br/>\nClients should submit a search request using the corresponding `POST /search/studies` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -10702,14 +10674,12 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Get the results of a Studies search request
+      summary: Get the results of a `Studies` search request
       tags:
       - Studies
   /search/trials:
     post:
-      description: 'Advanced searching for the programs resource.
-
-        See Search Services for additional implementation details.'
+      description: "Submit a search request for `Trials`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/trials/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -10951,7 +10921,7 @@ paths:
                         items:
                           properties:
                             active:
-                              description: Is this trail currently active
+                              description: Is this trial currently active
                               example: true
                               type: boolean
                             additionalInfo:
@@ -11260,14 +11230,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Trials
+      summary: Submit a search request for `Trials`
       tags:
       - Trials
   /search/trials/{searchResultsDbId}:
     get:
-      description: 'Advanced searching for the trials resource.
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a `Trials` search request <br/>\nClients should submit a search request using the corresponding `POST /search/trials` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -11402,7 +11370,7 @@ paths:
                         items:
                           properties:
                             active:
-                              description: Is this trail currently active
+                              description: Is this trial currently active
                               example: true
                               type: boolean
                             additionalInfo:
@@ -11719,7 +11687,7 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Get the results of a Trials search request
+      summary: Get the results of a `Trials` search request
       tags:
       - Trials
   /seasons:
@@ -15996,7 +15964,7 @@ paths:
                         items:
                           properties:
                             active:
-                              description: Is this trail currently active
+                              description: Is this trial currently active
                               example: true
                               type: boolean
                             additionalInfo:
@@ -16219,7 +16187,7 @@ paths:
               items:
                 properties:
                   active:
-                    description: Is this trail currently active
+                    description: Is this trial currently active
                     example: true
                     type: boolean
                   additionalInfo:
@@ -16478,7 +16446,7 @@ paths:
                         items:
                           properties:
                             active:
-                              description: Is this trail currently active
+                              description: Is this trial currently active
                               example: true
                               type: boolean
                             additionalInfo:
@@ -16801,7 +16769,7 @@ paths:
                   result:
                     properties:
                       active:
-                        description: Is this trail currently active
+                        description: Is this trial currently active
                         example: true
                         type: boolean
                       additionalInfo:
@@ -17033,7 +17001,7 @@ paths:
             schema:
               properties:
                 active:
-                  description: Is this trail currently active
+                  description: Is this trial currently active
                   example: true
                   type: boolean
                 additionalInfo:
@@ -17288,7 +17256,7 @@ paths:
                   result:
                     properties:
                       active:
-                        description: Is this trail currently active
+                        description: Is this trial currently active
                         example: true
                         type: boolean
                       additionalInfo:

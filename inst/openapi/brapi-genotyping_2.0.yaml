@@ -29,7 +29,7 @@ paths:
         required: false
         schema:
           type: string
-      - description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+      - description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
         in: query
         name: expandHomozygotes
         required: false
@@ -251,7 +251,7 @@ paths:
                           type: object
                         type: array
                       expandHomozygotes:
-                        description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+                        description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
                         example: true
                         type: boolean
                       sepPhased:
@@ -769,7 +769,7 @@ paths:
         required: true
         schema:
           type: string
-      - description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+      - description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
         in: query
         name: expandHomozygotes
         required: false
@@ -991,7 +991,7 @@ paths:
                           type: object
                         type: array
                       expandHomozygotes:
-                        description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+                        description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
                         example: true
                         type: boolean
                       sepPhased:
@@ -4591,10 +4591,7 @@ paths:
       - Samples
   /search/calls:
     post:
-      description: 'Submit a search request for `Calls`
-
-
-        ** THIS ENDPOINT USES TOKEN BASED PAGING **'
+      description: "Submit a search request for `Calls`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/calls/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details. \n<br/>\n<br/>\n<strong>NOTE:</strong> This endpoint uses Token based pagination. Please Review the \n<a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Pagination\">Pagination documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -4617,7 +4614,7 @@ paths:
                     type: string
                   type: array
                 expandHomozygotes:
-                  description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+                  description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
                   example: true
                   type: boolean
                 pageSize:
@@ -4835,7 +4832,7 @@ paths:
                           type: object
                         type: array
                       expandHomozygotes:
-                        description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+                        description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
                         example: true
                         type: boolean
                       sepPhased:
@@ -5001,13 +4998,7 @@ paths:
       - Calls
   /search/calls/{searchResultsDbId}:
     get:
-      description: 'Returns a filtered list of `Call` JSON objects.
-
-
-        See Search Services for additional implementation details.
-
-
-        ** THIS ENDPOINT USES TOKEN BASED PAGING **'
+      description: "Get the results of a `Calls` search request <br/>\nClients should submit a search request using the corresponding `POST /search/calls` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details.\n<br/>\n<br/>\n<strong>NOTE:</strong> This endpoint uses Token based pagination. Please Review the \n<a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Pagination\">Pagination documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -5213,7 +5204,7 @@ paths:
                           type: object
                         type: array
                       expandHomozygotes:
-                        description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+                        description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
                         example: true
                         type: boolean
                       sepPhased:
@@ -5374,12 +5365,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Returns a filtered list of `Call` JSON objects.
+      summary: Get the results of a `Calls` search request
       tags:
       - Calls
   /search/callsets:
     post:
-      description: Gets a list of call sets matching the search criteria.
+      description: "Submit a search request for `CallSets`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/callsets/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -5748,12 +5739,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of call sets matching the search criteria.
+      summary: Submit a search request for `CallSets`
       tags:
       - Call Sets
   /search/callsets/{searchResultsDbId}:
     get:
-      description: Gets a list of call sets matching the search criteria.
+      description: "Get the results of a `CallSets` search request <br/>\nClients should submit a search request using the corresponding `POST /search/callsets` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -6074,12 +6065,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of call sets matching the search criteria.
+      summary: Get the results of a `CallSets` search request
       tags:
       - Call Sets
   /search/markerpositions:
     post:
-      description: Get marker position information, based on Map, Linkage Group, and Marker ID
+      description: "Submit a search request for `MarkerPositions`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/markerpositions/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -6413,12 +6404,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Get marker position info
+      summary: Submit a search request for `MarkerPositions`
       tags:
       - Genome Maps
   /search/markerpositions/{searchResultsDbId}:
     get:
-      description: Get marker position information, based on Map, Linkage Group, and Marker ID
+      description: "Get the results of a `MarkerPositions` search request <br/>\nClients should submit a search request using the corresponding `POST /search/markerpositions` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -6729,16 +6720,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Get marker position info
+      summary: Get the results of a `MarkerPositions` search request
       tags:
       - Genome Maps
   /search/references:
     post:
-      description: '`POST /references/search` must accept a JSON version of
-
-        `SearchReferencesRequest` as the post body and will return a JSON
-
-        version of `SearchReferencesResponse`.'
+      description: "Submit a search request for `References`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/references/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -7111,16 +7098,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of `Reference` matching the search criteria.
+      summary: Submit a search request for `References`
       tags:
       - References
   /search/references/{searchResultsDbId}:
     get:
-      description: '`POST /references/search` must accept a JSON version of
-
-        `SearchReferencesRequest` as the post body and will return a JSON
-
-        version of `SearchReferencesResponse`.'
+      description: "Get the results of a `References` search request <br/>\nClients should submit a search request using the corresponding `POST /search/references` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -7462,12 +7445,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of `Reference` matching the search criteria.
+      summary: Get the results of a `References` search request
       tags:
       - References
   /search/referencesets:
     post:
-      description: Gets a list of `ReferenceSet` matching the search criteria.
+      description: "Submit a search request for `ReferenceSets`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/referencesets/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -7832,12 +7815,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of `ReferenceSet` matching the search criteria.
+      summary: Submit a search request for `ReferenceSets`
       tags:
       - Reference Sets
   /search/referencesets/{searchResultsDbId}:
     get:
-      description: Gets a list of `ReferenceSet` matching the search criteria.
+      description: "Get the results of a `ReferenceSets` search request <br/>\nClients should submit a search request using the corresponding `POST /search/referencesets` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -8183,15 +8166,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of `ReferenceSet` matching the search criteria.
+      summary: Get the results of a `ReferenceSets` search request
       tags:
       - Reference Sets
   /search/samples:
     post:
-      description: 'Used to retrieve list of Samples from a Sample Tracking system based on some search criteria.
-
-
-        See Search Services for additional implementation details.'
+      description: "Submit a search request for `Samples`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/samples/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -8658,15 +8638,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Samples
+      summary: Submit a search request for `Samples`
       tags:
       - Samples
   /search/samples/{searchResultsDbId}:
     get:
-      description: 'Used to retrieve list of Samples from a Sample Tracking system based on some search criteria.
-
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a `Samples` search request <br/>\nClients should submit a search request using the corresponding `POST /search/samples` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -9078,15 +9055,12 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Get the results of a Samples search request
+      summary: Get the results of a `Samples` search request
       tags:
       - Samples
   /search/variants:
     post:
-      description: 'Gets a list of `Variant` matching the search criteria.
-
-
-        ** THIS ENDPOINT USES TOKEN BASED PAGING **'
+      description: "Submit a search request for `Variants`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/variants/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details.\n<br/>\n<br/>\n<strong>NOTE:</strong> This endpoint uses Token based pagination. Please Review the \n<a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Pagination\">Pagination documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -9520,15 +9494,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of `Variant` matching the search criteria.
+      summary: Submit a search request for `Variants`
       tags:
       - Variants
   /search/variants/{searchResultsDbId}:
     get:
-      description: 'Gets a list of `Variant` matching the search criteria.
-
-
-        ** THIS ENDPOINT USES TOKEN BASED PAGING **'
+      description: "Get the results of a `Variants` search request <br/>\nClients should submit a search request using the corresponding `POST /search/variants` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details.\n<br/>\n<br/>\n<strong>NOTE:</strong> This endpoint uses Token based pagination. Please Review the \n<a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Pagination\">Pagination documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -9931,12 +9902,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of `Variant` matching the search criteria.
+      summary: Get the results of a `Variants` search request
       tags:
       - Variants
   /search/variantsets:
     post:
-      description: Gets a list of `VariantSet` matching the search criteria.
+      description: "Submit a search request for `VariantSets`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/variantsets/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -10355,12 +10326,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of `VariantSet` matching the search criteria.
+      summary: Submit a search request for `VariantSets`
       tags:
       - Variant Sets
   /search/variantsets/{searchResultsDbId}:
     get:
-      description: Gets a list of `VariantSet` matching the search criteria.
+      description: "Get the results of a `VariantSets` search request <br/>\nClients should submit a search request using the corresponding `POST /search/variantsets` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -10747,7 +10718,7 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Gets a list of `VariantSet` matching the search criteria.
+      summary: Get the results of a `VariantSets` search request
       tags:
       - Variant Sets
   /variants:
@@ -11352,7 +11323,7 @@ paths:
         required: true
         schema:
           type: string
-      - description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+      - description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
         in: query
         name: expandHomozygotes
         required: false
@@ -11574,7 +11545,7 @@ paths:
                           type: object
                         type: array
                       expandHomozygotes:
-                        description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+                        description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
                         example: true
                         type: boolean
                       sepPhased:
@@ -11968,7 +11939,7 @@ paths:
                     type: string
                   type: array
                 expandHomozygotes:
-                  description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+                  description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
                   example: true
                   type: boolean
                 sepPhased:
@@ -12551,7 +12522,7 @@ paths:
         required: true
         schema:
           type: string
-      - description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+      - description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
         in: query
         name: expandHomozygotes
         required: false
@@ -12773,7 +12744,7 @@ paths:
                           type: object
                         type: array
                       expandHomozygotes:
-                        description: Should homozygotes be expanded (true) or collapsed into a single occurence (false)
+                        description: Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
                         example: true
                         type: boolean
                       sepPhased:

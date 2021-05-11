@@ -5613,7 +5613,7 @@ paths:
                               type: string
                             crossName:
                               description: the human readable name for a cross
-                              example: my_Ibadan_Crosses_2018_01
+                              example: my_Crosses_2018_01
                               type: string
                             crossType:
                               description: the type of cross
@@ -5633,7 +5633,7 @@ paths:
                               type: string
                             crossingProjectName:
                               description: the human readable name for a crossing project
-                              example: my_Ibadan_Crosses_2018
+                              example: my_Crosses_2018
                               type: string
                             externalReferences:
                               description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -5671,7 +5671,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -5699,7 +5699,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -5798,7 +5798,7 @@ paths:
                     type: array
                   crossName:
                     description: the human readable name for a cross
-                    example: my_Ibadan_Crosses_2018_01
+                    example: my_Crosses_2018_01
                     type: string
                   crossType:
                     description: the type of cross
@@ -5818,7 +5818,7 @@ paths:
                     type: string
                   crossingProjectName:
                     description: the human readable name for a crossing project
-                    example: my_Ibadan_Crosses_2018
+                    example: my_Crosses_2018
                     type: string
                   externalReferences:
                     description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -5856,7 +5856,7 @@ paths:
                         type: string
                       observationUnitName:
                         description: the human readable name for an observation unit
-                        example: my_Ibadan_Plot_9001
+                        example: my_Plot_9001
                         type: string
                       parentType:
                         description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -5884,7 +5884,7 @@ paths:
                         type: string
                       observationUnitName:
                         description: the human readable name for an observation unit
-                        example: my_Ibadan_Plot_9001
+                        example: my_Plot_9001
                         type: string
                       parentType:
                         description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -6030,7 +6030,7 @@ paths:
                               type: string
                             crossName:
                               description: the human readable name for a cross
-                              example: my_Ibadan_Crosses_2018_01
+                              example: my_Crosses_2018_01
                               type: string
                             crossType:
                               description: the type of cross
@@ -6050,7 +6050,7 @@ paths:
                               type: string
                             crossingProjectName:
                               description: the human readable name for a crossing project
-                              example: my_Ibadan_Crosses_2018
+                              example: my_Crosses_2018
                               type: string
                             externalReferences:
                               description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -6088,7 +6088,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -6116,7 +6116,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -6215,7 +6215,7 @@ paths:
                     type: array
                   crossName:
                     description: the human readable name for a cross
-                    example: my_Ibadan_Crosses_2018_01
+                    example: my_Crosses_2018_01
                     type: string
                   crossType:
                     description: the type of cross
@@ -6235,7 +6235,7 @@ paths:
                     type: string
                   crossingProjectName:
                     description: the human readable name for a crossing project
-                    example: my_Ibadan_Crosses_2018
+                    example: my_Crosses_2018
                     type: string
                   externalReferences:
                     description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -6273,7 +6273,7 @@ paths:
                         type: string
                       observationUnitName:
                         description: the human readable name for an observation unit
-                        example: my_Ibadan_Plot_9001
+                        example: my_Plot_9001
                         type: string
                       parentType:
                         description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -6301,7 +6301,7 @@ paths:
                         type: string
                       observationUnitName:
                         description: the human readable name for an observation unit
-                        example: my_Ibadan_Plot_9001
+                        example: my_Plot_9001
                         type: string
                       parentType:
                         description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -6325,21 +6325,21 @@ paths:
                   crossAttributes:
                   - crossAttributeName: string
                     crossAttributeValue: string
-                  crossName: my_Ibadan_Crosses_2018_01
+                  crossName: my_Crosses_2018_01
                   crossType: BIPARENTAL
                   crossingProjectDbId: 696d7c92
-                  crossingProjectName: my_Ibadan_Crosses_2018
+                  crossingProjectName: my_Crosses_2018
                   parent1:
                     germplasmDbId: d34b10c3
                     germplasmName: TME_419
                     observationUnitDbId: 3f0a1798
-                    observationUnitName: my_Ibadan_Plot_9001
+                    observationUnitName: my_Plot_9001
                     parentType: FEMALE
                   parent2:
                     germplasmDbId: 776a609c
                     germplasmName: TME_419
                     observationUnitDbId: 2e1926a7
-                    observationUnitName: my_Ibadan_Plot_9002
+                    observationUnitName: my_Plot_9002
                     parentType: MALE
                   pollinationTimeStamp: '2019-08-15T18:49:00.327Z'
                 <crossDbId_2>:
@@ -6347,21 +6347,21 @@ paths:
                   crossAttributes:
                   - crossAttributeName: string
                     crossAttributeValue: string
-                  crossName: my_Ibadan_Crosses_2018_02
+                  crossName: my_Crosses_2018_02
                   crossType: BIPARENTAL
                   crossingProjectDbId: 696d7c92
-                  crossingProjectName: my_Ibadan_Crosses_2018
+                  crossingProjectName: my_Crosses_2018
                   parent1:
                     germplasmDbId: c43a2fd2
                     germplasmName: TME_419
                     observationUnitDbId: 3f2a37b8
-                    observationUnitName: my_Ibadan_Plot_9013
+                    observationUnitName: my_Plot_9013
                     parentType: FEMALE
                   parent2:
                     germplasmDbId: 124b10ad
                     germplasmName: TME_419
                     observationUnitDbId: 27194637
-                    observationUnitName: my_Ibadan_Plot_9014
+                    observationUnitName: my_Plot_9014
                     parentType: MALE
                   pollinationTimeStamp: '2019-08-15T18:49:00.327Z'
               type: object
@@ -6493,7 +6493,7 @@ paths:
                               type: string
                             crossName:
                               description: the human readable name for a cross
-                              example: my_Ibadan_Crosses_2018_01
+                              example: my_Crosses_2018_01
                               type: string
                             crossType:
                               description: the type of cross
@@ -6513,7 +6513,7 @@ paths:
                               type: string
                             crossingProjectName:
                               description: the human readable name for a crossing project
-                              example: my_Ibadan_Crosses_2018
+                              example: my_Crosses_2018
                               type: string
                             externalReferences:
                               description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -6551,7 +6551,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -6579,7 +6579,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -6807,7 +6807,7 @@ paths:
                               type: string
                             crossingProjectName:
                               description: the human readable name for a crossing project
-                              example: Ibadan_Crosses_2018
+                              example: Crosses_2018
                               type: string
                             externalReferences:
                               description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -6913,7 +6913,7 @@ paths:
                     type: string
                   crossingProjectName:
                     description: the human readable name for a crossing project
-                    example: Ibadan_Crosses_2018
+                    example: Crosses_2018
                     type: string
                   externalReferences:
                     description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -7066,7 +7066,7 @@ paths:
                               type: string
                             crossingProjectName:
                               description: the human readable name for a crossing project
-                              example: Ibadan_Crosses_2018
+                              example: Crosses_2018
                               type: string
                             externalReferences:
                               description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -7276,7 +7276,7 @@ paths:
                         type: string
                       crossingProjectName:
                         description: the human readable name for a crossing project
-                        example: Ibadan_Crosses_2018
+                        example: Crosses_2018
                         type: string
                       externalReferences:
                         description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -7383,7 +7383,7 @@ paths:
                   type: string
                 crossingProjectName:
                   description: the human readable name for a crossing project
-                  example: Ibadan_Crosses_2018
+                  example: Crosses_2018
                   type: string
                 externalReferences:
                   description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -7532,7 +7532,7 @@ paths:
                         type: string
                       crossingProjectName:
                         description: the human readable name for a crossing project
-                        example: Ibadan_Crosses_2018
+                        example: Crosses_2018
                         type: string
                       externalReferences:
                         description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -11805,7 +11805,7 @@ paths:
                               type: string
                             crossingProjectName:
                               description: the human readable name for a crossing project
-                              example: my_Ibadan_Crosses_2018
+                              example: my_Crosses_2018
                               type: string
                             externalReferences:
                               description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -11843,7 +11843,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -11871,7 +11871,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -11889,7 +11889,7 @@ paths:
                               type: string
                             plannedCrossName:
                               description: the human readable name for a cross
-                              example: my_Ibadan_Crosses_2018_01
+                              example: my_Crosses_2018_01
                               type: string
                           type: object
                         type: array
@@ -11975,7 +11975,7 @@ paths:
                     type: string
                   crossingProjectName:
                     description: the human readable name for a crossing project
-                    example: my_Ibadan_Crosses_2018
+                    example: my_Crosses_2018
                     type: string
                   externalReferences:
                     description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -12013,7 +12013,7 @@ paths:
                         type: string
                       observationUnitName:
                         description: the human readable name for an observation unit
-                        example: my_Ibadan_Plot_9001
+                        example: my_Plot_9001
                         type: string
                       parentType:
                         description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -12041,7 +12041,7 @@ paths:
                         type: string
                       observationUnitName:
                         description: the human readable name for an observation unit
-                        example: my_Ibadan_Plot_9001
+                        example: my_Plot_9001
                         type: string
                       parentType:
                         description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -12055,7 +12055,7 @@ paths:
                     type: object
                   plannedCrossName:
                     description: the human readable name for a cross
-                    example: my_Ibadan_Crosses_2018_01
+                    example: my_Crosses_2018_01
                     type: string
                 type: object
               type: array
@@ -12184,7 +12184,7 @@ paths:
                               type: string
                             crossingProjectName:
                               description: the human readable name for a crossing project
-                              example: my_Ibadan_Crosses_2018
+                              example: my_Crosses_2018
                               type: string
                             externalReferences:
                               description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -12222,7 +12222,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -12250,7 +12250,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -12268,7 +12268,7 @@ paths:
                               type: string
                             plannedCrossName:
                               description: the human readable name for a cross
-                              example: my_Ibadan_Crosses_2018_01
+                              example: my_Crosses_2018_01
                               type: string
                           type: object
                         type: array
@@ -12354,7 +12354,7 @@ paths:
                     type: string
                   crossingProjectName:
                     description: the human readable name for a crossing project
-                    example: my_Ibadan_Crosses_2018
+                    example: my_Crosses_2018
                     type: string
                   externalReferences:
                     description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -12392,7 +12392,7 @@ paths:
                         type: string
                       observationUnitName:
                         description: the human readable name for an observation unit
-                        example: my_Ibadan_Plot_9001
+                        example: my_Plot_9001
                         type: string
                       parentType:
                         description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -12420,7 +12420,7 @@ paths:
                         type: string
                       observationUnitName:
                         description: the human readable name for an observation unit
-                        example: my_Ibadan_Plot_9001
+                        example: my_Plot_9001
                         type: string
                       parentType:
                         description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -12434,7 +12434,7 @@ paths:
                     type: object
                   plannedCrossName:
                     description: the human readable name for a cross
-                    example: my_Ibadan_Crosses_2018_01
+                    example: my_Crosses_2018_01
                     type: string
                 type: object
               description: A map of new Planned Cross entities. The key is the plannedCrossDbId of the entity to be updated, the value is the Planned Cross object.
@@ -12446,20 +12446,20 @@ paths:
                     crossAttributeValue: string
                   crossType: BIPARENTAL
                   crossingProjectDbId: 696d7c92
-                  crossingProjectName: my_Ibadan_Crosses_2018
+                  crossingProjectName: my_Crosses_2018
                   parent1:
                     germplasmDbId: d34b10c3
                     germplasmName: TME_419
                     observationUnitDbId: 3f0a1798
-                    observationUnitName: my_Ibadan_Plot_9001
+                    observationUnitName: my_Plot_9001
                     parentType: FEMALE
                   parent2:
                     germplasmDbId: 776a609c
                     germplasmName: TME_419
                     observationUnitDbId: 2e1926a7
-                    observationUnitName: my_Ibadan_Plot_9002
+                    observationUnitName: my_Plot_9002
                     parentType: MALE
-                  plannedCrossName: my_Ibadan_Crosses_2018_01
+                  plannedCrossName: my_Crosses_2018_01
                   pollinationTimeStamp: '2019-08-15T18:49:00.327Z'
                 <plannedCrossDbId_2>:
                   additionalInfo: {}
@@ -12468,20 +12468,20 @@ paths:
                     crossAttributeValue: string
                   crossType: BIPARENTAL
                   crossingProjectDbId: 696d7c92
-                  crossingProjectName: my_Ibadan_Crosses_2018
+                  crossingProjectName: my_Crosses_2018
                   parent1:
                     germplasmDbId: c43a2fd2
                     germplasmName: TME_419
                     observationUnitDbId: 3f2a37b8
-                    observationUnitName: my_Ibadan_Plot_9013
+                    observationUnitName: my_Plot_9013
                     parentType: FEMALE
                   parent2:
                     germplasmDbId: 124b10ad
                     germplasmName: TME_419
                     observationUnitDbId: 27194637
-                    observationUnitName: my_Ibadan_Plot_9014
+                    observationUnitName: my_Plot_9014
                     parentType: MALE
-                  plannedCrossName: my_Ibadan_Crosses_2018_02
+                  plannedCrossName: my_Crosses_2018_02
                   pollinationTimeStamp: '2019-08-15T18:49:00.327Z'
               type: object
       responses:
@@ -12609,7 +12609,7 @@ paths:
                               type: string
                             crossingProjectName:
                               description: the human readable name for a crossing project
-                              example: my_Ibadan_Crosses_2018
+                              example: my_Crosses_2018
                               type: string
                             externalReferences:
                               description: An array of external reference ids. These are references to this piece of data in an external system. Could be a simple string or a URI.
@@ -12647,7 +12647,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -12675,7 +12675,7 @@ paths:
                                   type: string
                                 observationUnitName:
                                   description: the human readable name for an observation unit
-                                  example: my_Ibadan_Plot_9001
+                                  example: my_Plot_9001
                                   type: string
                                 parentType:
                                   description: The type of parent ex. 'MALE', 'FEMALE', 'SELF', 'POPULATION', etc.
@@ -12693,7 +12693,7 @@ paths:
                               type: string
                             plannedCrossName:
                               description: the human readable name for a cross
-                              example: my_Ibadan_Crosses_2018_01
+                              example: my_Crosses_2018_01
                               type: string
                           type: object
                         type: array
@@ -12742,7 +12742,7 @@ paths:
       - Crosses
   /search/attributes:
     post:
-      description: "Search for a set of Germplasm Attributes based on some criteria\n        \nSee Search Services for additional implementation details."
+      description: "Submit a search request for Germplasm `Attributes`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/attributes/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -13659,15 +13659,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Germplasm Attributes
+      summary: Submit a search request for Germplasm `Attributes`
       tags:
       - Germplasm Attributes
   /search/attributes/{searchResultsDbId}:
     get:
-      description: 'Get the results of a Germplasm Attributes search request
-
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a Germplasm `Attributes` search request <br/>\nClients should submit a search request using the corresponding `POST /search/attributes` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -14487,12 +14484,12 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Get the results of a Germplasm Attributes search request
+      summary: Get the results of a Germplasm `Attributes` search request
       tags:
       - Germplasm Attributes
   /search/attributevalues:
     post:
-      description: "Search for a set of Germplasm Attribute Values based on some criteria\n        \nSee Search Services for additional implementation details."
+      description: "Submit a search request for Germplasm `AttributeValues`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/attributevalues/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -14948,15 +14945,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Germplasm Attribute Values
+      summary: Submit a search request for Germplasm `AttributeValues`
       tags:
       - Germplasm Attribute Values
   /search/attributevalues/{searchResultsDbId}:
     get:
-      description: 'Get the results of a Germplasm Attribute Values search request
-
-
-        See Search Services for additional implementation details.'
+      description: "Get the results of a Germplasm `AttributeValues` search request <br/>\nClients should submit a search request using the corresponding `POST /search/attributevalues` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -15299,12 +15293,12 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Get the results of a Germplasm Attribute Values search request
+      summary: Get the results of a Germplasm `AttributeValues` search request
       tags:
       - Germplasm Attribute Values
   /search/germplasm:
     post:
-      description: "Search for a set of germplasm based on some criteria\n\nAddresses these needs \n\n- General germplasm search mechanism that accepts POST for complex queries \n\n- Possibility to search germplasm by more parameters than those allowed by the existing germplasm search \n\n- Possibility to get MCPD details by PUID rather than dbId\n\nSee Search Services for additional implementation details."
+      description: "Submit a search request for `Germplasm`<br/>\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse the corresponding `GET /search/germplasm/{searchResultsDbId}` to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: "HTTP HEADER - Token used for Authorization \n\n<strong> Bearer {token_string} </strong>"
         example: Bearer XXXX
@@ -16089,12 +16083,12 @@ paths:
                 type: string
           description: Forbidden
           headers: {}
-      summary: Submit a search request for Germplasm
+      summary: Submit a search request for `Germplasm`
       tags:
       - Germplasm
   /search/germplasm/{searchResultsDbId}:
     get:
-      description: "See Search Services for additional implementation details.\n\nAddresses these needs: \n\n1. General germplasm search mechanism that accepts POST for complex queries \n\n2. possibility to search germplasm by more parameters than those allowed by the existing germplasm search \n\n3. possibility to get MCPD details by PUID rather than dbId"
+      description: "Get the results of a `Germplasm` search request <br/>\nClients should submit a search request using the corresponding `POST /search/germplasm` endpoint.\nSearch requests allow a client to send a complex query for data. However, the server may not respond with the search results immediately. \nIf a server needs more time to process the request, it might respond with a `searchResultsDbId`. \nUse this endpoint to retrieve the results of the search. <br/> \nReview the <a target=\"_blank\" href=\"https://wiki.brapi.org/index.php/Search_Services#POST_Search_Entity\">Search Services documentation</a> for additional implementation details."
       parameters:
       - description: Unique identifier which references the search results
         in: path
@@ -16776,7 +16770,7 @@ paths:
                 type: string
           description: Not Found
           headers: {}
-      summary: Get the results of a Germplasm search request
+      summary: Get the results of a `Germplasm` search request
       tags:
       - Germplasm
   /seedlots:
@@ -17564,7 +17558,7 @@ paths:
                               example: f9cd88d2
                               type: string
                             transactionTimestamp:
-                              description: The time stamp for when the transaction occured
+                              description: The time stamp for when the transaction occurred
                               format: date-time
                               type: string
                             units:
@@ -17674,7 +17668,7 @@ paths:
                     example: f9cd88d2
                     type: string
                   transactionTimestamp:
-                    description: The time stamp for when the transaction occured
+                    description: The time stamp for when the transaction occurred
                     format: date-time
                     type: string
                   units:
@@ -17831,7 +17825,7 @@ paths:
                               example: f9cd88d2
                               type: string
                             transactionTimestamp:
-                              description: The time stamp for when the transaction occured
+                              description: The time stamp for when the transaction occurred
                               format: date-time
                               type: string
                             units:
@@ -18443,7 +18437,7 @@ paths:
         required: true
         schema:
           type: string
-      - description: Unique id for a Transaction that has occured
+      - description: Unique id for a Transaction that has occurred
         in: query
         name: transactionDbId
         required: false
@@ -18631,7 +18625,7 @@ paths:
                               example: f9cd88d2
                               type: string
                             transactionTimestamp:
-                              description: The time stamp for when the transaction occured
+                              description: The time stamp for when the transaction occurred
                               format: date-time
                               type: string
                             units:
@@ -18721,3 +18715,8 @@ tags:
     description: Docs
     url: https://wiki.brapi.org/
   name: Crosses
+- description: Information about Seed Lots
+  externalDocs:
+    description: Docs
+    url: https://wiki.brapi.org/
+  name: Seed Lots
