@@ -23,12 +23,21 @@
 #'
 #' @examples
 #' \dontrun{
+
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
-#'
-#' TO BE ADDED: AN EXAMPLE WITH A SAVED OR ASYNCHRONOUS SEARCH
-#' Still to be completed:
-#' brapi_{{verb}}_{{name}}(con = con, searchResultsDbId = "")
+#' # Saved or Asynchronous Search Response Example
+#' out <-
+#'  brapi_post_search_(con = con,
+#'                     ,
+#'                     ,
+#'                     ,
+#'                     ,
+#'                     )
+#' searchResultsDbId <- out$searchResultsDbId
+#' brapi_get_search_lists_searchResultsDbId(con = con,
+#'                                            searchResultsDbId = searchResultsDbId)
+#' brapi_{{verb}}_{{name}}(con = con, searchResultsDbId = searchResultsDbId)
 #' }
 #'
 #' @export
