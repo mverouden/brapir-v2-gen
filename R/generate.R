@@ -392,7 +392,7 @@ aCallReqArgs <- function(aCall) {
 ### brapi-genotyping_2.0.yaml # Genotyping Specs
 ### brapi-germplasm_2.0.yaml # Germplasm Specs
 ### brapi-phenotyping_2.0.yaml # Phenotyping Specs
-brapiSpecs <- yaml::read_yaml(system.file("openapi/brapi-core_2.0.yaml",
+brapiSpecs <- yaml::read_yaml(system.file("openapi/brapi-phenotyping_2.0.yaml",
                                           package = "brapigen"))
 
 ### Packages to be added to DESCRIPTION of Brapir
