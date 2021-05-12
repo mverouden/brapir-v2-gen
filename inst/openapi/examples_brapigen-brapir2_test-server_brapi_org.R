@@ -4,7 +4,9 @@
 ## con[["token"]] <- "YYYY"
 ##
 ## (D = Detail, M = Master, M/D = Master/Detail)
-## tested calls BrAPI-Core: GET 23/23, POST 14/14, PUT 7/7
+## tested calls BrAPI-Core:        GET 23/23, POST 14/14, PUT 7/7   ## FINISHED
+## tested calls BrAPI-Phenotyping: GET 17/23, POST  1/11, PUT 1/10
+
 
 # Server Info
 brapi_get_serverinfo(con = con)#, dataType = "") # 18 (M/D)
@@ -68,8 +70,6 @@ brapi_put_people_personDbId(con = con, personDbId = personDbId, additionalInfo =
 brapi_post_search_people() # 8 (D) see Examples section for specification
 brapi_get_search_people_searchResultsDbId(con = con, searchResultsDbId = "")#, pageSize = 1000, page = 0) # 12 (D)
 
-## (D = Detail, M = Master, M/D = Master/Detail)
-## tested calls BrAPI-Phenotyping: GET 1/23, POST /11, PUT /10
 
-# Observations
-brapi_get_observations(con = con) # 7 (D)
+
+
