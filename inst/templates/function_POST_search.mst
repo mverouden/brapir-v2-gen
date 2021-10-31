@@ -26,7 +26,6 @@
 #' con <- brapi_db()$testserver
 #' con[["token"]] <- "YYYY"
 #'
-#'
 #' # Immediate Response Example
 #' brapi_{{verb}}_{{name}}(con = con, )
 #'
